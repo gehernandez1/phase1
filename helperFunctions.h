@@ -104,7 +104,7 @@ void commandMeetReqs(string* command,int counter)
   //checks to see if parameters are correct for he assemble command
   if(command[0] == "assemble" && counter == 2)
     {
-      assemble("file");
+	assemble(command[1]);
     }
   else if(command[0] == "assemble" && counter < 2)
     {

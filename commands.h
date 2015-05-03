@@ -10,6 +10,8 @@
 #include <string>
 #include <stdlib.h>
 #include <cstdlib>
+#include <unistd.h>
+#include <cstring>
 
 using namespace std;
 
@@ -69,7 +71,10 @@ void dump(string start,string end)
 
 void assemble(string filename)
 {
-	cout << "Command Successful" << endl ;
+	char* test ;
+	strcpy(test,filename);
+	execlp(assemble,test);
+cout << "Command Successful" << endl ;
 }
 
 void dir()
